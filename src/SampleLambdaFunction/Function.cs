@@ -16,7 +16,6 @@ namespace SampleLambdaFunction
 {
     public class Function
     {
-        
         /// <summary>
         /// A simple function that accepts a city name, and queries weather data for that city.
         /// </summary>
