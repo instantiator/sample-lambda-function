@@ -24,6 +24,8 @@ namespace SampleLambdaFunction
         {
             context.Logger.LogLine("Querying OpenWeather for: " + input);
             var weatherKey = Environment.GetEnvironmentVariable("WEATHER_API_KEY");
+
+            // (!) Injecting strings into your query without checking them first is dangerous. Don't do it in production!
             var query = $"https://api.openweathermap.org/data/2.5/weather?q={input}&appid={weatherKey}";
             using (var http = new HttpClient())
             {
